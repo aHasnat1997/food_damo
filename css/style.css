@@ -1,0 +1,312 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;700&family=Monoton&family=Shrikhand&display=swap');
+
+/* Comon Proparty */
+*{
+  box-sizing: border-box;
+  font-family: 'Assistant', sans-serif;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+}
+.bg-primary{
+  background-color: rgb(76, 58, 81) !important;
+}
+.bg-secondary{
+  background-color: rgb(119, 67, 96) !important;
+}
+.text-primary{
+  color: #ffdfb5 !important;
+}
+h1{
+  font-family: 'Shrikhand', cursive;
+  font-size: 5rem;
+}
+.bg-body{
+  background-color: rgb(179, 81, 106) !important;
+}
+/* Comon Proparty */
+
+/* Nav Start */
+nav{
+  background-color: #1e1e1e;
+  box-shadow: 0rem .2rem 1rem #000000;
+  /* padding: 0.1rem 0rem; */
+  width: 100%;
+  position: fixed;
+  top: -7rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 0.4s;
+}
+nav.change{
+  top: 0rem;
+  transition: top 0.4s 0.2s;
+}
+nav a{
+  color: #aaa !important;
+  margin: .5rem 2rem;
+  padding: 0;
+  opacity: 0;
+  transition: color 0.3, opacity, .2s;
+}
+.change a{
+  opacity: 1;
+}
+.change a:nth-child(1){
+  transition: opacity 0.4s 0.5s, color 0.3s;
+}
+.change a:nth-child(2){
+  transition: opacity 0.4s 0.6s, color 0.3s;
+}
+.change a:nth-child(3){
+  transition: opacity 0.4s 0.7s, color 0.3s;
+}
+.change a:nth-child(4){
+  transition: opacity 0.4s 0.8s, color 0.3s;
+}
+nav a i{
+  font-size: 3rem;
+  text-align: center;
+}
+nav a p{
+  font-size: 1rem;
+  text-align: center;
+}
+nav a:hover{
+  color: rgb(255, 255, 255) !important;
+}
+.menu{
+  width: 2.5rem;
+  height: 4rem;
+  background-color: #1e1e1e;
+  border-radius: 15rem 15rem 5rem 5rem;
+  position: fixed;
+  top: 1rem;
+  left: 2rem;
+  cursor: pointer;
+  transition: top 0.5s 0.3s;
+}
+.menu::after{
+  content: "";
+  width: .2rem;
+  height: 10rem;
+  background-color: #1b1b1b;
+  position: absolute;
+  top: -10rem;
+  left: calc(50% - 0.1rem);
+}
+.menu.change{
+  top: 9rem;
+  transition: top 0.5s;
+}
+/* .menu:hover{
+  background-color: #696969;
+  box-shadow: 0rem 0rem 5rem 1rem #575757;
+} */
+.light{
+  background-color: #ffffff;
+  box-shadow: 0rem 0rem 5rem 1rem #ffffff;
+}
+/* Nav End */
+
+/* Header Srart */
+header{
+  padding-top: 10%;
+  padding-bottom: 34%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+header h1{
+  font-family: 'Monoton', cursive;
+  /* font-size: 5rem; */
+  text-transform: capitalize;
+  letter-spacing: .5rem;
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+.headIcin i{
+  font-size: 20rem;
+  color: rgb(178, 80, 104);
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
+  position: absolute;
+  transform: translate(-50%, 15%) scale(0);
+  transition: transform .3s;
+}
+.headIcin .showIcon{
+  transform: translate(-50%, 15%) scale(1);
+  transition: transform .3s .5s;
+}
+/* Header End */
+
+/* Meals Start */
+.meals .container{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.meals .card{
+  width: 25%;
+  position: relative;
+  border-radius: 0;
+  box-shadow: 1rem 1rem 1rem #1f1f1f;
+  transition: 0.5s;
+}
+.meals .card::before{
+  content: "";
+  width: 1rem;
+  height: 100%;
+  background-color: rgb(249, 118, 151);
+  position: absolute;
+  left: -1rem;
+  transform: skewY(45deg);
+  transform-origin: right;
+}
+.meals .card::after{
+  content: "";
+  width: 100%;
+  height: 1rem;
+  background-color: rgb(255, 146, 174);
+  position: absolute;
+  right: 0;
+  top: -1rem;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+}
+.meals .card:hover{
+  box-shadow: 1rem 1rem 2rem #1f1f1f;
+  transform: translateY(-2rem);
+}
+.meals .card button{
+  background-color: rgb(231, 171, 121);
+  border: none;
+  width: 50%;
+  margin: auto;
+  padding: .5rem;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.3rem #000;
+  transition: 0.5s;
+}
+.meals .card button:hover{
+  background-color: rgb(255, 132, 31);
+}
+/* Meals End */
+
+/* Gallery Start */
+.gallery .container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.gallery a{
+  margin: 1rem ;
+  text-decoration: none;
+  color: #fff;
+  width: 30%;
+  position: relative;
+}
+.gallery a::after{
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 0.2rem;
+  height: 0%;
+  background-color: #ffdfb5;
+  transition: 0.5s;
+}
+.gallery a:hover::after{
+  height: 80%;
+}
+.gallery a::before{
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  width: 0%;
+  height: 0.2rem;
+  background-color: #ffdfb5;
+  transition: 0.5s;
+}
+.gallery a:hover::before{
+  width: 90%;
+}
+.gallery h3{
+  margin: 1rem 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.gallery a:hover h3{
+  transition: 1s 0.5s;
+  width: 100%;
+}
+.gallery p{
+  margin: 1rem 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.gallery a:hover p{
+  opacity: 1;
+  visibility: visible;
+  transition: 1.5s 0.5s;
+}
+.galleryImg{
+  width: 100%;
+  object-fit: cover;
+  box-shadow: .2rem .2rem .1rem rgb(255, 255, 255);
+  transition: 0.5s;
+}
+.gallery a:hover .galleryImg{
+  box-shadow: .2rem .2rem .1rem rgb(76, 58, 81), .4rem .4rem .1rem rgb(130, 90, 141),
+  .6rem .6rem .1rem rgb(196, 152, 209), .8rem .8rem .1rem rgb(255, 255, 255);
+  /* filter: blur(.5rem); */
+  opacity: 0.3;
+}
+/* Gallery End */
+
+/* Footer Start */
+footer{
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(46, 34, 49);
+}
+footer h3{
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+footer input{
+  width: 25rem;
+  height: 4rem;
+  padding: 5px 25px;
+  border: 5px solid rgb(76, 58, 81);
+}
+footer button{
+  position: relative;
+  right: 3.7rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(76, 58, 81);
+  border: none;
+}
+footer .copy{
+  margin: 0px;
+  width: 100%;
+  padding: 2rem;
+  border-top: 2px solid #fff;
+  text-align: center;
+}
+/* Footer End */
+
